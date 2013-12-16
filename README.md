@@ -10,7 +10,7 @@ moment("2013-01-01").fquarter();
 // Q4 2012/13
 ```
 
-The default fiscal year starting month is April. You can optionally pass in the start month, for example 1 (January) for normal calendar quarters, 9 (September) for academic quarters.
+The default fiscal year starting month is April. You can optionally pass in the start month, for example 1 (January) for normal calendar quarters, 7 or 9 (July or September) for academic quarters.
 ```javascript
 moment("2013-09-01").fquarter(9);
 // Q1 2013/14

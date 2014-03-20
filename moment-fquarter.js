@@ -13,7 +13,7 @@
 
             if (startMonth > 1) {
                 adjustedDate = this.subtract("months", startMonth - 1);
-                result.nextYear = adjustedDate.clone().add("years", 1).format("YYYY");
+                result.nextYear = adjustedDate.clone().add("years", 1).year();
             } else {
                 adjustedDate = this;
                 result.nextYear = false;

@@ -4,10 +4,16 @@ module.exports = function(grunt) {
 
         // Metadata.
         pkg: grunt.file.readJSON('package.json'),
+        banner: '/*! \n * <%= pkg.title || pkg.name %> v<%= pkg.version %>\n' +
+            ' * <%= pkg.homepage %>\n' +
+            ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+            ' * License: <%= pkg.license %>\n' +
+            ' */\n',
 
         // Task configuration.
         uglify: {
             options: {
+                banner: '<%= banner %>',
                 report: 'gzip'
             },
             build: {

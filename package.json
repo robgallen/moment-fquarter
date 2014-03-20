@@ -4,7 +4,14 @@
   "main": "moment-fquarter.js",
   "devDependencies": {
     "grunt": "^0.4.4",
-    "grunt-contrib-uglify": "^0.4.0"
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-coffee": "^0.10.1",
+    "karma": "^0.12.1",
+    "karma-jasmine": "^0.1.5",
+    "karma-chrome-launcher": "^0.1.2",
+    "karma-phantomjs-launcher": "^0.1.2",
+    "karma-opera-launcher": "^0.1.0",
+    "grunt-karma": "^0.8.2"
   },
   "version": "0.3.0",
   "dependencies": {

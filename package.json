@@ -1,9 +1,16 @@
 {
-  "name": "moment-fquarter",
+  "name": "moment-fquarter.js",
   "description": "Fiscal quarterly formatting for momentjs",
   "main": "moment-fquarter.js",
   "devDependencies": {
     "grunt": "^0.4.4",
     "grunt-contrib-uglify": "^0.4.0"
-  }
+  },
+  "version": "0.3.0",
+  "dependencies": {
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt": "~0.4.4"
+  },
+  "author": "Rob Allen",
+  "license": "MIT"
 }

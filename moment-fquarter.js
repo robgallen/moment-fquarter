@@ -13,7 +13,7 @@
 
             if (startMonth > 1) {
                 adjustedDate = this.subtract("months", startMonth - 1);
-				nextYear = "/" + adjustedDate.clone().add("years", 1).format("YY");
+				nextYear = "/" + adjustedDate.clone().add("years", 1).format("YYYY");
             } else {
                 adjustedDate = this;
 				nextYear = "";
@@ -22,7 +22,7 @@
             quarter = Math.ceil((adjustedDate.month() + 1.0) / 3.0);
             year = adjustedDate.year();
 
-            return {quarter: quarter, year: year, nextYear: year}
+            return {quarter: quarter, year: year, nextYear: nextYear}
         };
 
         return moment;

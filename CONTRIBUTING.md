@@ -2,12 +2,14 @@ Contributing
 ============
 
 
+Install
+
 ```
 $ npm install
 $ bower install
 ```
 
-Running tests
+How to run tests
 ```
 $ grunt tests
 ```

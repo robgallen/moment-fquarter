@@ -1,0 +1,21 @@
+{
+  "name": "moment-fquarter",
+  "main": "moment-fquarter.js",
+  "version": "0.3.0",
+  "homepage": "https://github.com/robgallen/moment-fquarter",
+  "authors": [
+    "Rob Allen"
+  ],
+  "description": "Fiscal quarterly formatting for momentjs",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "moment": "~2.4.0"
+  }
+}

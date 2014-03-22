@@ -8,19 +8,26 @@
 
     function onload(moment) {
         moment.fn.fquarter = function (startMonth) {
-            var result = {}, adjustedDate;
+            var initial = this.lang()._quarter  || "Q";
+            var result = {}, adjustedDate, nextYear = null;
             startMonth = startMonth || 4; // default is April
 
             if (startMonth > 1) {
                 adjustedDate = this.subtract("months", startMonth - 1);
-                result.nextYear = adjustedDate.clone().add("years", 1).year();
+                nextYear = adjustedDate.clone().add("years", 1);
             } else {
                 adjustedDate = this;
-                result.nextYear = false;
             }
 
             result.quarter  = Math.ceil((adjustedDate.month() + 1.0) / 3.0);
             result.year     = adjustedDate.year();
+            result.nextYear = (nextYear) ? nextYear.year() : nextYear;
+
+            result.toString = function()
+            {
+                var str = initial + result.quarter + " " + result.year;
+                return (nextYear) ? str + "/" + nextYear.format("YY") : str;
+            };
 
             return result;
 

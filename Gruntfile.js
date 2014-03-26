@@ -20,10 +20,30 @@ module.exports = function(grunt) {
                 src: 'moment-fquarter.js',
                 dest: 'moment-fquarter.min.js'
             }
+        },
+
+        karma: {
+            unit: {
+                configFile: 'karma.conf.js'
+            }
+        },
+
+        coffee: {
+            compile: {
+                files: {
+                    'test/fquarterSpec.js': 'test/fquarterSpec.coffee'
+                }
+            }
         }
 
-    });
+
+        });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-coffee');
+    grunt.loadNpmTasks('grunt-karma');
+
+    grunt.registerTask('tests', ['coffee', 'karma']);
+
     grunt.registerTask('minify', ['uglify']);
 };

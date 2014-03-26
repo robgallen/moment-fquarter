@@ -1,29 +1,34 @@
 // moment-fquarter.js
-// version : 0.3
+// version : 0.4
 // author : Rob Allen
 // license : MIT
 // github.com/robgallen/moment-fquarter
 
 (function () {
-	
+
 	function onload(moment) {
 		moment.fn.fquarter = function (startMonth) {
 			var initial = this.lang()._quarter || "Q";
-			var adjustedDate, quarter, year, nextYear;
+			var result = {}, adjustedDate, nextYear = null;
 			startMonth = startMonth || 4; // default is April
 
 			if (startMonth > 1) {
 				adjustedDate = this.subtract("months", startMonth - 1);
-				nextYear = "/" + adjustedDate.clone().add("years", 1).format("YY");
+				nextYear = adjustedDate.clone().add("years", 1);
 			} else {
 				adjustedDate = this;
-				nextYear = "";
 			}
 
-			quarter = Math.ceil((adjustedDate.month() + 1.0) / 3.0);
-			year = adjustedDate.year();
+			result.quarter = Math.ceil((adjustedDate.month() + 1.0) / 3.0);
+			result.year = adjustedDate.year();
+			result.nextYear = (nextYear) ? nextYear.year() : nextYear;
 
-			return initial + quarter + " " + year + nextYear;
+			result.toString = function () {
+				var str = initial + result.quarter + " " + result.year;
+				return (nextYear) ? str + "/" + nextYear.format("YY") : str;
+			};
+
+			return result;
 		};
 
 		return moment;
@@ -36,5 +41,5 @@
 	} else if (typeof window !== "undefined" && window.moment) {
 		onload(window.moment);
 	}
-	
+
 }).apply(this);

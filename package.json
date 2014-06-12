@@ -1,5 +1,5 @@
 {
-  "name": "moment-fquarter.js",
+  "name": "moment-fquarter",
   "description": "Fiscal quarterly formatting for momentjs",
   "main": "moment-fquarter.js",
   "devDependencies": {

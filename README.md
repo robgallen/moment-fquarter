@@ -2,7 +2,7 @@
 This plugin provides fiscal quarterly formatting for moment objects.
 
 ## How to use?
-Call the `fquarter` method on any moment object. It returns a string.
+Call the `fquarter` method on any moment object. It returns an object by default and can also return a string.
 ```javascript
 moment("2013-04-01").fquarter();
 // {quarter:1, year:2013, nextYear:2014}

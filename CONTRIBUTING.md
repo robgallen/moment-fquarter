@@ -1,14 +1,13 @@
-Contributing
-============
+Please make sure all tests pass before sending your PR.
 
-
-Install
-
-```
+How to install dependencies
+```shell
 $ npm install
 ```
 
-How to run tests
-```
+How to run the tests
+```shell
 $ npm test
 ```
+
+Additional tests can be added to `tests/fquarterSpec.coffee`

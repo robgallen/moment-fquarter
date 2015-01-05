@@ -1,23 +1,31 @@
 {
   "name": "moment-fquarter",
+  "version": "0.1.0",
   "description": "Fiscal quarterly formatting for momentjs",
+  "author": "Rob Allen",
+  "contributors": [
+    {
+      "name": "Yago Ferrer",
+      "email": "yago.ferrer@gmail.com"
+    }
+  ],
+  "scripts": {
+    "postinstall": "./node_modules/.bin/bower install",
+    "test": "./node_modules/.bin/grunt test"
+  },
   "main": "moment-fquarter.js",
   "devDependencies": {
+    "bower": "^1.3.12",
     "grunt": "^0.4.4",
-    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-cli": "^0.1.13",
     "grunt-contrib-coffee": "^0.10.1",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-karma": "^0.8.2",
     "karma": "^0.12.1",
-    "karma-jasmine": "^0.1.5",
     "karma-chrome-launcher": "^0.1.2",
-    "karma-phantomjs-launcher": "^0.1.2",
+    "karma-jasmine": "^0.1.5",
     "karma-opera-launcher": "^0.1.0",
-    "grunt-karma": "^0.8.2"
+    "karma-phantomjs-launcher": "^0.1.2"
   },
-  "version": "0.3.0",
-  "dependencies": {
-    "grunt-contrib-uglify": "~0.4.0",
-    "grunt": "~0.4.4"
-  },
-  "author": "Rob Allen",
   "license": "MIT"
 }

@@ -5,10 +5,10 @@ module.exports = function(grunt) {
         // Metadata.
         pkg: grunt.file.readJSON('package.json'),
         banner: '/*! \n * <%= pkg.title || pkg.name %> v<%= pkg.version %>\n' +
-            ' * <%= pkg.homepage %>\n' +
-            ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-            ' * License: <%= pkg.license %>\n' +
-            ' */\n',
+        ' * <%= pkg.homepage %>\n' +
+        ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+        ' * License: <%= pkg.license %>\n' +
+        ' */\n',
 
         // Task configuration.
         uglify: {
@@ -37,13 +37,13 @@ module.exports = function(grunt) {
         }
 
 
-        });
+    });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-coffee');
     grunt.loadNpmTasks('grunt-karma');
 
-    grunt.registerTask('tests', ['coffee', 'karma']);
+    grunt.registerTask('test', ['coffee', 'karma']);
 
     grunt.registerTask('minify', ['uglify']);
 };

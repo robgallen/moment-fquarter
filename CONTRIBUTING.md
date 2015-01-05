@@ -1,15 +1,13 @@
-Contributing
-============
+Please make sure all tests pass before sending your PR.
 
-
-Install
-
-```
+How to install dependencies
+```shell
 $ npm install
-$ bower install
 ```
 
-How to run tests
+How to run the tests
+```shell
+$ npm test
 ```
-$ grunt tests
-```
+
+Additional tests can be added to `tests/fquarterSpec.coffee`

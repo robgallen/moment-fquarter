@@ -111,3 +111,41 @@ describe "Academic quarters", ->
   it "Dec is Q2", ->
     expect(moment("2013-12-01").fquarter(9)).toEqual({quarter: 2, year: 2013, nextYear: 2014})
     expect(moment("2013-12-01").fquarter(9).toString()).toEqual("Q2 2013/14")
+
+describe "Backwards Fiscal Year quarters", ->
+  it "January is FYQ2 of current calendar year", ->
+    expect(moment('2015-01-01').fquarter(-3)).toEqual({quarter: 2, year: 2015, nextYear: 2016})
+    expect(moment("2015-01-01").fquarter(-3).toString()).toEqual("Q2 2015/16")
+  it "February is FYQ2 of current calendar year", ->
+    expect(moment('2015-02-15').fquarter(-3)).toEqual({quarter: 2, year: 2015, nextYear: 2016})
+    expect(moment("2015-02-15").fquarter(-3).toString()).toEqual("Q2 2015/16")
+  it "March is FYQ2 of current calendar year", ->
+    expect(moment('2015-03-15').fquarter(-3)).toEqual({quarter: 2, year: 2015, nextYear: 2016})
+    expect(moment("2015-03-15").fquarter(-3).toString()).toEqual("Q2 2015/16")
+  it "April is FYQ3 of current calendar year", ->
+    expect(moment('2015-04-15').fquarter(-3)).toEqual({quarter: 3, year: 2015, nextYear: 2016})
+    expect(moment("2015-04-15").fquarter(-3).toString()).toEqual("Q3 2015/16")
+  it "May is FYQ3 of current calendar year", ->
+    expect(moment('2015-05-15').fquarter(-3)).toEqual({quarter: 3, year: 2015, nextYear: 2016})
+    expect(moment("2015-05-15").fquarter(-3).toString()).toEqual("Q3 2015/16")
+  it "June is FYQ3 of current calendar year", ->
+    expect(moment('2015-06-15').fquarter(-3)).toEqual({quarter: 3, year: 2015, nextYear: 2016})
+    expect(moment("2015-06-15").fquarter(-3).toString()).toEqual("Q3 2015/16")
+  it "July is FYQ4 of current calendar year", ->
+    expect(moment('2015-07-15').fquarter(-3)).toEqual({quarter: 4, year: 2015, nextYear: 2016})
+    expect(moment("2015-07-15").fquarter(-3).toString()).toEqual("Q4 2015/16")
+  it "August is FYQ4 of current calendar year", ->
+    expect(moment('2015-08-05').fquarter(-3)).toEqual({quarter: 4, year: 2015, nextYear: 2016})
+    expect(moment("2015-08-05").fquarter(-3).toString()).toEqual("Q4 2015/16")
+  it "September is Q4 of current calendar year", ->
+    expect(moment('2015-09-15').fquarter(-3)).toEqual({quarter: 4, year: 2015, nextYear: 2016})
+    expect(moment("2015-09-15").fquarter(-3).toString()).toEqual("Q4 2015/16")
+  it "October is Q1 of next calendar year", ->
+    expect(moment('2015-10-15').fquarter(-3)).toEqual({quarter: 1, year: 2016, nextYear: 2017})
+    expect(moment("2015-10-15").fquarter(-3).toString()).toEqual("Q1 2016/17")
+  it "November is Q1 of next calendar year", ->
+    expect(moment('2015-10-15').fquarter(-3)).toEqual({quarter: 1, year: 2016, nextYear: 2017})
+    expect(moment("2015-10-15").fquarter(-3).toString()).toEqual("Q1 2016/17")
+  it "December is Q1 of next calendar year", ->
+    expect(moment('2015-10-15').fquarter(-3)).toEqual({quarter: 1, year: 2016, nextYear: 2017})
+    expect(moment("2015-10-15").fquarter(-3).toString()).toEqual("Q1 2016/17")

@@ -18,6 +18,18 @@
 			} else {
 				adjustedDate = this;
 			}
+			if (startMonth > 1) {
+				adjustedDate = this.subtract(startMonth - 1, "months");
+				nextYear = adjustedDate.clone().add(1, "years");
+			} else {
+				adjustedDate = this;
+			}
+			if (startMonth < 0) {
+				adjustedDate = this.subtract(12 + startMonth, "month").add(1, "year");
+				nextYear = adjustedDate.clone().add(1, "year");
+			} else {
+				adjustedDate = this;
+			}
 
 			result.quarter = Math.ceil((adjustedDate.month() + 1.0) / 3.0);
 			result.year = adjustedDate.year();

@@ -112,6 +112,7 @@ describe "Academic quarters", ->
     expect(moment("2013-12-01").fquarter(9)).toEqual({quarter: 2, year: 2013, nextYear: 2014})
     expect(moment("2013-12-01").fquarter(9).toString()).toEqual("Q2 2013/14")
 
+
 describe "Backwards Fiscal Year quarters", ->
   it "January is FYQ2 of current calendar year", ->
     expect(moment('2015-01-01').fquarter(-3)).toEqual({quarter: 2, year: 2015, nextYear: 2016})

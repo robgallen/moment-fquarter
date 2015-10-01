@@ -37,6 +37,19 @@ moment("2013-09-01").fquarter(1).toString();
 // Q3 2013
 ```
 
+## Backwards fiscal year
+Some countries begin their fiscal quarters in the previous year, e.g. US Federal govt. where October 2013 is Q1 2014. You can now use a negative starting month to reflect this.
+```javascript
+moment("2013-01-01").fquarter(-3);
+// {quarter:2, year:2013, nextYear:2014}
+moment("2013-01-01").fquarter(-3).toString();
+// Q2 2013/14
+moment("2013-10-01").fquarter(-3);
+// {quarter:1, year:2014, nextYear:2015}
+moment("2013-10-01").fquarter(-3).toString();
+// Q1 2014/15
+```
+
 ## Changing the quarter initial
 ```javascript
 week: {

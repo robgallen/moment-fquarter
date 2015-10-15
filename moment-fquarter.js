@@ -12,6 +12,7 @@
 			var initial = thisDate.local()._quarter || "Q";
 			var result = {}, adjustedDate, nextYear = null;
 			startMonth = startMonth || 4; // default is April
+			var originalDate = this.clone();
 
 			if (startMonth > 1) {
 				adjustedDate = thisDate.subtract(startMonth - 1, "months");
@@ -29,6 +30,8 @@
 			result.quarter = Math.ceil((adjustedDate.month() + 1.0) / 3.0);
 			result.year = adjustedDate.year();
 			result.nextYear = (nextYear) ? nextYear.year() : nextYear;
+			result.start = originalDate.set("date", 1).subtract((originalDate.month()+12)%3, "months").format("YYYY-MM-DD");
+			result.end =   originalDate.set("date", 1).subtract((originalDate.month()+12)%3, "months").add(3, "months").subtract(1, "day").format("YYYY-MM-DD");
 
 			result.toString = function () {
 				var str = initial + result.quarter + " " + result.year;

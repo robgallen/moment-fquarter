@@ -150,3 +150,9 @@ describe "Backwards Fiscal Year quarters", ->
   it "December is Q1 of next calendar year", ->
     expect(moment('2015-10-15').fquarter(-3)).toEqual({quarter: 1, year: 2016, nextYear: 2017})
     expect(moment("2015-10-15").fquarter(-3).toString()).toEqual("Q1 2016/17")
+
+describe "Moment date should not change", ->
+  it "should not change original moment date object", ->
+    testDate = moment("2015-01-01")
+    testDate.fquarter()
+    expect(testDate.format("YYYY-MM-DD")).toEqual("2015-01-01")

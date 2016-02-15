@@ -1,0 +1,6 @@
+# http://editorconfig.org
+root = true
+
+[*.js]
+indent_style = tab
+

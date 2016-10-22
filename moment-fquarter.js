@@ -1,5 +1,5 @@
 // moment-fquarter.js
-// version : 0.4
+// version : 1.0
 // author : Rob Allen
 // license : MIT
 // github.com/robgallen/moment-fquarter

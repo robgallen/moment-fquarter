@@ -76,40 +76,40 @@ describe "Calendar quarters", ->
 
 describe "Academic quarters", ->
   it "Jan is Q2", ->
-    expect(moment("2013-01-01").fquarter(9)).toEqual({quarter: 2, year: 2012, nextYear: 2013, start: "2013-01-01", end: "2013-03-31"})
+    expect(moment("2013-01-01").fquarter(9)).toEqual({quarter: 2, year: 2012, nextYear: 2013, start: "2012-12-01", end: "2013-02-28"})
     expect(moment("2013-01-01").fquarter(9).toString()).toEqual("Q2 2012/13")
   it "Feb is Q2", ->
-    expect(moment("2013-02-01").fquarter(9)).toEqual({quarter: 2, year: 2012, nextYear: 2013, start: "2013-01-01", end: "2013-03-31"})
+    expect(moment("2013-02-01").fquarter(9)).toEqual({quarter: 2, year: 2012, nextYear: 2013, start: "2012-12-01", end: "2013-02-28"})
     expect(moment("2013-02-01").fquarter(9).toString()).toEqual("Q2 2012/13")
   it "Mar is Q3", ->
-    expect(moment("2013-03-01").fquarter(9)).toEqual({quarter: 3, year: 2012, nextYear: 2013, start: "2013-01-01", end: "2013-03-31"})
+    expect(moment("2013-03-01").fquarter(9)).toEqual({quarter: 3, year: 2012, nextYear: 2013, start: "2013-03-01", end: "2013-05-31"})
     expect(moment("2013-03-01").fquarter(9).toString()).toEqual("Q3 2012/13")
   it "Apr is Q3", ->
-    expect(moment("2013-04-01").fquarter(9)).toEqual({quarter: 3, year: 2012, nextYear: 2013, start: "2013-04-01", end: "2013-06-30"})
+    expect(moment("2013-04-01").fquarter(9)).toEqual({quarter: 3, year: 2012, nextYear: 2013, start: "2013-03-01", end: "2013-05-31"})
     expect(moment("2013-04-01").fquarter(9).toString()).toEqual("Q3 2012/13")
   it "May is Q3", ->
-    expect(moment("2013-05-01").fquarter(9)).toEqual({quarter: 3, year: 2012, nextYear: 2013, start: "2013-04-01", end: "2013-06-30"})
+    expect(moment("2013-05-01").fquarter(9)).toEqual({quarter: 3, year: 2012, nextYear: 2013, start: "2013-03-01", end: "2013-05-31"})
     expect(moment("2013-05-01").fquarter(9).toString()).toEqual("Q3 2012/13")
   it "Jun is Q4", ->
-    expect(moment("2013-06-01").fquarter(9)).toEqual({quarter: 4, year: 2012, nextYear: 2013, start: "2013-04-01", end: "2013-06-30"})
+    expect(moment("2013-06-01").fquarter(9)).toEqual({quarter: 4, year: 2012, nextYear: 2013, start: "2013-06-01", end: "2013-08-31"})
     expect(moment("2013-06-01").fquarter(9).toString()).toEqual("Q4 2012/13")
   it "Jul is Q4", ->
-    expect(moment("2013-07-01").fquarter(9)).toEqual({quarter: 4, year: 2012, nextYear: 2013, start: "2013-07-01", end: "2013-09-30"})
+    expect(moment("2013-07-01").fquarter(9)).toEqual({quarter: 4, year: 2012, nextYear: 2013, start: "2013-06-01", end: "2013-08-31"})
     expect(moment("2013-07-01").fquarter(9).toString()).toEqual("Q4 2012/13")
   it "Aug is Q4", ->
-    expect(moment("2013-08-01").fquarter(9)).toEqual({quarter: 4, year: 2012, nextYear: 2013, start: "2013-07-01", end: "2013-09-30"})
+    expect(moment("2013-08-01").fquarter(9)).toEqual({quarter: 4, year: 2012, nextYear: 2013, start: "2013-06-01", end: "2013-08-31"})
     expect(moment("2013-08-01").fquarter(9).toString()).toEqual("Q4 2012/13")
   it "Sep is Q1", ->
-    expect(moment("2013-09-01").fquarter(9)).toEqual({quarter: 1, year: 2013, nextYear: 2014, start: "2013-07-01", end: "2013-09-30"})
+    expect(moment("2013-09-01").fquarter(9)).toEqual({quarter: 1, year: 2013, nextYear: 2014, start: "2013-09-01", end: "2013-11-30"})
     expect(moment("2013-09-01").fquarter(9).toString()).toEqual("Q1 2013/14")
   it "Oct is Q1", ->
-    expect(moment("2013-10-01").fquarter(9)).toEqual({quarter: 1, year: 2013, nextYear: 2014, start: "2013-10-01", end: "2013-12-31"})
+    expect(moment("2013-10-01").fquarter(9)).toEqual({quarter: 1, year: 2013, nextYear: 2014, start: "2013-09-01", end: "2013-11-30"})
     expect(moment("2013-10-01").fquarter(9).toString()).toEqual("Q1 2013/14")
   it "Nov is Q1", ->
-    expect(moment("2013-11-01").fquarter(9)).toEqual({quarter: 1, year: 2013, nextYear: 2014, start: "2013-10-01", end: "2013-12-31"})
+    expect(moment("2013-11-01").fquarter(9)).toEqual({quarter: 1, year: 2013, nextYear: 2014, start: "2013-09-01", end: "2013-11-30"})
     expect(moment("2013-11-01").fquarter(9).toString()).toEqual("Q1 2013/14")
   it "Dec is Q2", ->
-    expect(moment("2013-12-01").fquarter(9)).toEqual({quarter: 2, year: 2013, nextYear: 2014, start: "2013-10-01", end: "2013-12-31"})
+    expect(moment("2013-12-01").fquarter(9)).toEqual({quarter: 2, year: 2013, nextYear: 2014, start: "2013-12-01", end: "2014-02-28"})
     expect(moment("2013-12-01").fquarter(9).toString()).toEqual("Q2 2013/14")
 
 describe "Backwards Fiscal Year quarters", ->

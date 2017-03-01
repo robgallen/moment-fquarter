@@ -10,4 +10,4 @@ How to run the tests
 $ npm test
 ```
 
-Additional tests can be added to `tests/fquarterSpec.coffee`
+Additional tests can be added to `moment-fquarter.test.js`
